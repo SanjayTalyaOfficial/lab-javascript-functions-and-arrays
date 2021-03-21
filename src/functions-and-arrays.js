@@ -1,9 +1,8 @@
-const { chartreuse } = require("color-name");
-const { count } = require("console");
+
 
 // Progression #1: Greatest of the two numbers
 var x = 10; var y= 20;
-greatestOfTwoNumbers = () => {
+greatestOfTwoNumbers = (x,y) => {
   if( x >  y){
     return x;
   }
@@ -14,6 +13,9 @@ greatestOfTwoNumbers = () => {
 // Progression #2: The lengthy word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 function findScaryWord(words){
+  if(words.length ===0){
+    return null;
+  }
   var lngth = 0;
   var longest;
   for(var i=0; i < words.length ; i++){
@@ -28,7 +30,7 @@ findScaryWord();
 
 // Progression #3: Net Price
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
-function netPrice(){
+function netPrice(numbers){
   if(numbers.length === 0){
     return 0;
   }
@@ -47,7 +49,7 @@ function netPrice(){
 // Progression #4: Calculate the average
 // Progression 4.1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
-midPointOfLevels = () => {
+midPointOfLevels = (numbersAvg) => {
   if(numbersAvg.length === 0){
     return null;
   }
@@ -60,7 +62,6 @@ midPointOfLevels = () => {
   }
   return avg;
 }
-midPointOfLevels();
 
 /* const midPointOfLevel = numbersAvg => numbersAvg.reduce((a,b) => a + b, 0)/numbersAvg.length */
 
@@ -152,3 +153,4 @@ const matrix = [
   [24, 55, 58, 05, 66, 73, 99, 26, 97, 17],
   [21, 36, 23, 09, 75, 00, 76, 44, 20, 45]
 ];
+
